@@ -17,7 +17,7 @@ Get user detail
 
 
 
-Update user detail  
+Update user detail, there are two users with two roles, user/password with role USER, admin/password with role ADMIN, only admin can update data.  
 `curl -u user:password -s --header "Content-Type: application/json" --request PATCH --data '{ "title": "Mr", "firstn": "Luke", "lastname": "Tong", "gender": "Male", "address": { "street": "abc street", "city": "Eastwood", "state": "NSW", "postcode": "2001" } }' http://localhost:8080/api/userdetails/1`  
 
 `curl -u admin:password -s --header "Content-Type: application/json" --request PATCH --data '{ "title": "Mr", "firstn": "Luke", "lastname": "Tong", "gender": "Male", "address": { "street": "abc street", "city": "Eastwood", "state": "NSW", "postcode": "2001" } }' http://localhost:8080/api/userdetails/1`
