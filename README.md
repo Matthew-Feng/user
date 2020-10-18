@@ -10,7 +10,6 @@ make sure you have maven installed
 
 Get user detail  
 ` curl  -s http://localhost:8080/api/userdetails/1`  
-` {"timestamp":"2020-10-18T03:25:03.033+00:00","status":401,"error":"Unauthorized","message":"","path":"/api/userdetails/1"}`  
 `curl -u user:password -s http://localhost:8080/api/userdetails/1`  
 `curl -u admin:password -s http://localhost:8080/api/userdetails/1`  
 `curl -u user:password -s http://localhost:8080/api/userdetails/800`  
@@ -18,23 +17,12 @@ Get user detail
 
 
 Update user detail  
-`curl  -u admin:password  -s --header "Content-Type: application/json"  
-   --request PATCH 
-   --data '{
-           "title": "Mr",
-           "firstn": "Luke",
-           "lastname": "Tong",
-           "gender": "Male",
-           "address": {
-           "street": "abc street",
-           "city": "Eastwood",
-           "state": "NSW",
-           "postcode": "2001"
-           }
-           }' 
-   http://localhost:8080/api/userdetails/1`
+`curl -u user:password -s --header "Content-Type: application/json" --request PATCH --data '{ "title": "Mr", "firstn": "Luke", "lastname": "Tong", "gender": "Male", "address": { "street": "abc street", "city": "Eastwood", "state": "NSW", "postcode": "2001" } }' http://localhost:8080/api/userdetails/1`  
+
+`curl -u admin:password -s --header "Content-Type: application/json" --request PATCH --data '{ "title": "Mr", "firstn": "Luke", "lastname": "Tong", "gender": "Male", "address": { "street": "abc street", "city": "Eastwood", "state": "NSW", "postcode": "2001" } }' http://localhost:8080/api/userdetails/1`
 
 Test circular break  
 `curl -u user:password -s http://localhost:8080/api/userdetails/fault-tolerance-example`  
-`Circular break is happening`
+
+Thank you.
 
