@@ -3,7 +3,7 @@ How to run?
 using JDK 11+  
 make sure you have maven installed
 
-`git clone git@github.com:Matthew-Feng/user.git`  
+`git clone https://github.com/Matthew-Feng/user`  
 `cd user`  
 `mvn clean install`  
 `cd target`  
