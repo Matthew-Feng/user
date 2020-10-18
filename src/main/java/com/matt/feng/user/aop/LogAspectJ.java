@@ -29,7 +29,7 @@ public class LogAspectJ {
 
     @After("publicControllerAndServiceMethod()")
     public void afterPublicMethod(JoinPoint joinPoint) {
-        log.info("Existing from : {}", joinPoint.getSignature().getName());
+        log.info("Exiting from : {}", joinPoint.getSignature().getName());
     }
 
 }
