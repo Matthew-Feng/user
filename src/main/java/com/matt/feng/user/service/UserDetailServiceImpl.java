@@ -14,18 +14,16 @@ public class UserDetailServiceImpl implements UserDetailService {
     @Autowired
     private UserDetailRepository userDetailRepository;
 
-
     @Override
     public UserDetail findById(Integer id) {
         return userDetailRepository.findById(id).orElseThrow(() -> new UserNotFoundException(("No UserDetail is found with id " + id)));
     }
 
-
     @Override
     public UserDetail updateUserDetail(UserDetail userDetail) {
-        UserDetail user = findById(userDetail.getId());
-        if (userDetail.getAddress() != null && user.getAddress() != null) {
-            userDetail.getAddress().setId(user.getAddress().getId());
+        UserDetail userDetailFromDb = findById(userDetail.getId());
+        if (userDetail.getAddress() != null && userDetailFromDb.getAddress() != null) {
+            userDetail.getAddress().setId(userDetailFromDb.getAddress().getId());
         }
         return userDetailRepository.save(userDetail);
     }

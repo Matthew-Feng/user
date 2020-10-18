@@ -19,15 +19,15 @@ public class LogAspectJ {
 
     @Pointcut("execution(public * com.matt.feng.user..controller..*(..)) || " +
             "execution(public * com.matt.feng.user..service..*(..)) ")
-    public void publicMethod() {
+    public void publicControllerAndServiceMethod() {
     }
 
-    @Before("publicMethod()")
+    @Before("publicControllerAndServiceMethod()")
     public void beforePublicMethod(JoinPoint joinPoint) {
         log.info("Entering into : {}", joinPoint.getSignature().getName());
     }
 
-    @After("publicMethod()")
+    @After("publicControllerAndServiceMethod()")
     public void afterPublicMethod(JoinPoint joinPoint) {
         log.info("Existing from : {}", joinPoint.getSignature().getName());
     }
