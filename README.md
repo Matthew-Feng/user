@@ -9,7 +9,7 @@ make sure you have maven installed
 `java -jar user-0.0.1-SNAPSHOT.jar`
 
 Get user detail  
-` curl  -s http://localhost:8080/api/userdetails/1`  
+`curl  -s http://localhost:8080/api/userdetails/1`  
 `curl -u user:password -s http://localhost:8080/api/userdetails/1`  
 `curl -u admin:password -s http://localhost:8080/api/userdetails/1`  
 `curl -u user:password -s http://localhost:8080/api/userdetails/800`  
