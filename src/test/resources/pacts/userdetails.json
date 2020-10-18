@@ -1,0 +1,45 @@
+{
+  "provider": {
+    "name": "user service"
+  },
+  "consumer": {
+    "name": "test consumer"
+  },
+  "interactions": [
+    {
+      "description": "get a valid userdetails",
+      "providerState": "Have a valid userdetails",
+      "request": {
+        "method": "get",
+        "path": "/api/userdetails/1000000"
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "title": "Ms",
+          "firstn": "Gates",
+          "lastname": "Clinton",
+          "gender": "Male",
+          "address": {
+            "street": "any Street",
+            "city": "Beijing",
+            "state": "Chaoyang",
+            "postcode": "1000"
+          }
+        }
+      }
+    },
+    {
+      "description": "No UserDetails were found",
+      "providerState": "No UserDetails were found",
+      "request": {
+        "method": "get",
+        "path": "/api/userdetails/300"
+      },
+      "response": {
+        "status": 404
+      }
+    }
+  ]
+}
+

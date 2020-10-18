@@ -1,0 +1,2 @@
+insert into ADDRESS(id,city,postcode,state,street) values(1000000,'Beijing','1000','Chaoyang','any Street');
+insert into user_detail(id,first_name,last_name,gender,title,address_id) values(1000000,'Gates','Clinton','Male','Ms',1000000);
