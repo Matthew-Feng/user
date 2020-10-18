@@ -21,7 +21,7 @@ Update user detail
 
 `curl -u admin:password -s --header "Content-Type: application/json" --request PATCH --data '{ "title": "Mr", "firstn": "Luke", "lastname": "Tong", "gender": "Male", "address": { "street": "abc street", "city": "Eastwood", "state": "NSW", "postcode": "2001" } }' http://localhost:8080/api/userdetails/1`
 
-Test Circuit  Break 
+Test Circuit  Breaker 
 `curl -u user:password -s http://localhost:8080/api/userdetails/fault-tolerance-example`  
 
 Thank you.
