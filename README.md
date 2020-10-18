@@ -1,6 +1,6 @@
 # user detail service
 How to run?  
-using JDK 11+
+using JDK 11+  
 make sure you have maven installed
 
 `git clone git@github.com:Matthew-Feng/user.git`  
