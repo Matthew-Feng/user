@@ -38,7 +38,7 @@ public class UserDetailController {
     }
 
     public String fallbackMethod() {
-        return "Circular break is happening";
+        return "Circuit  break is happening";
     }
 
 
